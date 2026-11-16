@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import "../styles/Home.css";
 import SubjectsSection from "../components/SubjectsSection";
-import GamesSection from "../components/GamesSection";
+
 
 function Home({ onSelectSubject }) {
 
