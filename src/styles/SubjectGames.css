@@ -1,0 +1,662 @@
+/* =========================================
+   SUBJECT GAMES PAGE
+========================================= */
+
+.games-page {
+    min-height: 100vh;
+    width: 100%;
+
+    background: url("/assets/images/gs-bg.png") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px 6% 60px;
+
+    font-family: inherit;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+
+    background: #ffc049;
+    color: #65452e;
+
+    padding: 12px 22px;
+    border: 3px solid #65452e;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px #00000012;
+
+    transition: 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   SUBJECT HEADING
+========================================= */
+
+.games-heading {
+    position: relative;
+
+    width: 60%;
+    max-width: 850px;
+    min-height: 145px;
+
+    margin: 25px auto 35px;
+
+    padding: 20px 25px 15px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: linear-gradient(180deg,
+            #ffc34e 0%,
+            #ffb32e 55%,
+            #ee941b 100%);
+
+    border: 5px solid #70401d;
+
+    border-radius: 34px;
+
+    box-shadow:
+        0 7px 0 #542c15,
+        0 12px 18px rgba(65, 35, 12, 0.25),
+        inset 0 3px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -5px 0 rgba(140, 75, 15, 0.2);
+
+    isolation: isolate;
+}
+
+.heading-crown {
+    position: absolute;
+
+    top: -50px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 50px;
+
+    filter: drop-shadow(0 3px 2px rgba(70, 30, 0, 0.3));
+
+    z-index: 2;
+
+    animation: crownFloat 2.5s ease-in-out infinite;
+}
+
+.games-heading h1 {
+    font-size: clamp(32px, 5vw, 48px);
+
+    color: #713b20;
+
+    font-weight: 1000;
+
+    margin: 0 0 8px;
+
+    line-height: 1.2;
+
+    text-shadow:
+        2px 3px 0 #ffffff,
+        3px 5px 3px rgba(75, 35, 10, 0.35);
+}
+
+.games-heading p {
+    color: #805432;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    margin: 0;
+
+    letter-spacing: 0.3px;
+}
+
+@keyframes crownFloat {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -5px);
+    }
+}
+
+
+/* =========================================
+   GAMES CONTENT
+========================================= */
+
+.games-content {
+    width: 100%;
+
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    padding: 25px 0 0;
+
+    box-sizing: border-box;
+}
+
+.games-content>h2 {
+    text-align: center;
+
+    color: #744525;
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    margin: 0 0 30px;
+}
+
+
+/* =========================================
+   GAME GRID - 4 CARDS
+========================================= */
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    column-gap: 12px;
+    row-gap: 25px;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    justify-items: center;
+}
+
+
+/* =========================================
+   GAME CARD - BACKGROUND FRAME
+   ASPECT RATIO 3:4
+========================================= */
+
+.game-card {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 300px;
+
+    aspect-ratio: 3 / 4;
+
+    background-image: url("/assets/images/game-card.png");
+
+    background-size: 100% 100%;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: block;
+
+    box-sizing: border-box;
+
+    isolation: isolate;
+
+    transition: transform 0.25s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   GAME NUMBER
+========================================= */
+
+.game-card-top {
+    position: absolute;
+
+    top: 15%;
+
+    left: 15%;
+
+    width: 70%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.game-number {
+    font-size: clamp(13px, 1.4vw, 19px);
+
+    color: #542d18;
+
+    font-weight: 900;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   GAME IMAGE - SQUARE 1:1
+========================================= */
+
+.game-icon {
+    position: absolute;
+
+    top: 22%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 52%;
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: transparent;
+
+    border-radius: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition: transform 0.25s ease;
+}
+
+.game-icon img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    display: block;
+}
+
+.game-card:hover .game-icon {
+    transform: translateX(-50%) scale(1.06);
+}
+
+
+/* =========================================
+   GAME TITLE
+========================================= */
+
+.game-card h3 {
+    position: absolute;
+
+    top: 60%;
+
+    left: 5%;
+
+    width: 90%;
+
+    margin: 0;
+
+    color: #111111;
+
+    font-size: clamp(15px, 2vw, 25px);
+
+    font-weight: 900;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   PLAY NOW BUTTON
+========================================= */
+
+.game-play-button {
+    position: absolute;
+
+    bottom: 18%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 68%;
+
+    min-height: 42px;
+
+    padding: 5px 8px;
+
+    border: 2px solid #382714;
+
+    border-radius: 50px;
+
+    background: #efa92e;
+
+    color: #3d210b;
+
+    font-size: clamp(14px, 1.8vw, 22px);
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    box-shadow: none;
+
+    transition: all 0.25s ease;
+}
+
+.game-play-button span {
+    display: none;
+}
+
+.game-play-button:hover {
+    background: #ffbd42;
+
+    transform: translateX(-50%) scale(1.05);
+}
+
+.game-play-button:active {
+    transform: translateX(-50%) scale(0.96);
+}
+
+
+/* =========================================
+   NOT FOUND
+========================================= */
+
+.games-not-found {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+.games-not-found h2 {
+    color: #713b20;
+
+    font-size: 28px;
+}
+
+.games-not-found button {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: #ffae38;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+
+    .games-grid {
+        max-width: 1300px;
+
+        column-gap: 15px;
+
+        row-gap: 30px;
+    }
+
+    .game-card {
+        max-width: 310px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .games-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        max-width: 700px;
+
+        gap: 20px;
+    }
+
+    .games-heading {
+        width: 80%;
+        min-height: 130px;
+    }
+
+    .game-card {
+        max-width: 300px;
+    }
+
+    .game-card h3 {
+        font-size: clamp(17px, 2.5vw, 23px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+    .games-heading {
+        width: 95%;
+
+        min-height: 115px;
+
+        padding: 20px 12px 12px;
+
+        margin: 28px auto 25px;
+
+        border-radius: 27px;
+
+        border-width: 4px;
+    }
+
+
+    .heading-crown {
+        font-size: 31px;
+        top: -23px;
+    }
+
+    .games-heading h1 {
+        font-size: 30px;
+    }
+
+    .games-heading p {
+        font-size: 14px;
+    }
+
+    .games-page {
+        padding: 22px 4% 40px;
+    }
+
+    .back-button {
+        padding: 10px 16px;
+
+        font-size: 13px;
+    }
+
+    .games-content {
+        padding: 20px 0 0;
+    }
+
+    .games-content>h2 {
+        font-size: 25px;
+
+        margin-bottom: 22px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 3px;
+
+        row-gap: 12px;
+    }
+
+    .game-card {
+        max-width: none;
+    }
+
+    .game-card-top {
+        top: 15%;
+    }
+
+    .game-number {
+        font-size: clamp(10px, 3vw, 15px);
+    }
+
+    .game-icon {
+        top: 22%;
+
+        width: 52%;
+    }
+
+    .game-card h3 {
+        top: 58%;
+
+        font-size: clamp(12px, 3.3vw, 18px);
+    }
+
+    .game-play-button {
+        bottom: 15%;
+
+        width: 68%;
+
+        min-height: 28px;
+
+        padding: 6px 3px;
+
+        font-size: clamp(10px, 2.8vw, 15px);
+
+        border-width: 1.5px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+    .games-heading h1 {
+        font-size: 25px;
+    }
+
+    .games-heading p {
+        font-size: 12px;
+    }
+
+    .games-grid {
+        column-gap: 1px;
+
+        row-gap: 8px;
+    }
+
+    .game-number {
+        font-size: 9px;
+    }
+
+    .game-card h3 {
+        font-size: 11px;
+    }
+
+    .game-play-button {
+        min-height: 24px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .game-card,
+    .game-icon,
+    .game-play-button,
+    .back-button {
+        transition: none;
+    }
+
+    .game-card:hover,
+    .game-card:hover .game-icon,
+    .game-play-button:hover,
+    .game-play-button:active,
+    .back-button:hover {
+        transform: none;
+    }
+}
