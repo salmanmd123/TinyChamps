@@ -3,8 +3,7 @@ import { useRef } from "react";
 import "../styles/Home.css";
 import SubjectsSection from "../components/SubjectsSection";
 
-
-function Home({ onSelectSubject }) {
+function Home() {
 
   const subjectsRef = useRef(null);
 
@@ -55,7 +54,7 @@ function Home({ onSelectSubject }) {
       {/* Subjects Section */}
 
       <div ref={subjectsRef}>
-        <SubjectsSection onSelectSubject={onSelectSubject} />
+        <SubjectsSection />
       </div>
 
     </main>

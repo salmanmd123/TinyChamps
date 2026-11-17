@@ -1,15 +1,21 @@
+
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/IntroScreen.css";
 
-function IntroScreen({ onComplete }) {
+function IntroScreen() {
+
+  const navigate = useNavigate();
 
   useEffect(() => {
+
     const timer = setTimeout(() => {
-      onComplete();
+      navigate("/home");
     }, 7000);
 
     return () => clearTimeout(timer);
-  }, [onComplete]);
+
+  }, [navigate]);
 
   return (
     <div className="intro-screen">

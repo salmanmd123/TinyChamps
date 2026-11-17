@@ -1,39 +1,25 @@
-import { useState, useCallback } from "react";
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import IntroScreen from "./components/IntroScreen";
 import Home from "./pages/Home";
-import SubjectsSection from "./components/SubjectsSection";
 
 function App() {
 
-  const [currentScreen, setCurrentScreen] = useState("intro");
-
-  const handleIntroComplete = useCallback(() => {
-    setCurrentScreen("home");
-  }, []);
-
-  const handlePlay = () => {
-    setCurrentScreen("subjects");
-  };
-
   return (
-    <>
+    <BrowserRouter>
 
-      {currentScreen === "intro" && (
-        <IntroScreen
-          onComplete={handleIntroComplete}
-        />
-      )}
+      <Routes>
 
-      {currentScreen === "home" && (
-        <Home onPlay={handlePlay} />
-      )}
+        <Route path="/" element={<IntroScreen />} />
 
-      {currentScreen === "subjects" && (
-        <SubjectsSection />
-      )}
+        <Route path="/home" element={<Home />} />
 
-    </>
+        <Route path="*" element={<Navigate to="/" replace />} />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
