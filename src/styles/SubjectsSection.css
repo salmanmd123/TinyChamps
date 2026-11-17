@@ -8,7 +8,7 @@
 
   padding: 45px 4% 65px;
 
-  background: url("/assets/images/gs-bg.png");
+  background: url("/assets/images/ss-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,7 +93,7 @@
 
 
 /* =========================================
-   GAME IMAGE
+   SUBJECT IMAGE
 ========================================= */
 
 .subject-image-wrapper {
