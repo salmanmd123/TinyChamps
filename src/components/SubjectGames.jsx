@@ -55,10 +55,6 @@ function SubjectGames() {
                                 <span className="game-number">
                                     GAME {String(index + 1).padStart(2, "0")}
                                 </span>
-
-                                <span className="game-level">
-                                    {game.level}
-                                </span>
                             </div>
 
                             <div className="game-icon">
@@ -69,11 +65,7 @@ function SubjectGames() {
 
                             <button
                                 className="game-play-button"
-                                onClick={() =>
-                                    navigate(
-                                        `/subjects/${slug}/games/${game.id}`
-                                    )
-                                }
+                                onClick={() => navigate(game.route)}
                             >
                                 Play Now <span>▶</span>
                             </button>

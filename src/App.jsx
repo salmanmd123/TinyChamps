@@ -8,8 +8,8 @@ import {
 
 import IntroScreen from "./components/IntroScreen";
 import SubjectGames from "./components/SubjectGames";
-import GamePage from "./components/GamePage";
 import Home from "./pages/Home";
+import JustDivide from "./pages/games/Maths/Just Divide/just-divide";
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
 
         {/* Individual Game Page */}
         <Route
-          path="/subjects/:slug/games/:gameId"
-          element={<GamePage />}
+          path="/games/just-divide"
+          element={<JustDivide />}
         />
 
         <Route
