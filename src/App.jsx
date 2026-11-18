@@ -10,6 +10,7 @@ import IntroScreen from "./components/IntroScreen";
 import SubjectGames from "./components/SubjectGames";
 import Home from "./pages/Home";
 import JustDivide from "./pages/games/Maths/Just Divide/just-divide";
+import MemoryMatch from "./pages/games/Brain/Memory Match/memory-match";
 
 function App() {
   return (
@@ -30,6 +31,11 @@ function App() {
         <Route
           path="/games/just-divide"
           element={<JustDivide />}
+        />
+
+        <Route
+          path="/games/memory-match"
+          element={<MemoryMatch />}
         />
 
         <Route

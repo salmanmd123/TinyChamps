@@ -102,19 +102,19 @@ const subjectGames = {
   //   ],
   // },
 
-  // mind: {
-  //   title: "Mind Masters",
-  //   subtitle: "Think smart, solve puzzles and shine!",
-  //   games: [
-  //     {
-  //       id: "memory",
-  //       title: "Memory Match",
-  //       image: "/assets/games/mm-mind.png",
-  //       route: "/games/memory-match",
+  mind: {
+    title: "Mind Masters",
+    subtitle: "Think smart, solve puzzles and shine!",
+    games: [
+      {
+        id: "memory",
+        title: "Memory Match",
+        image: "/assets/games/mm.png",
+        route: "/games/memory-match",
         
-  //     },
-  //   ],
-  // },
+      },
+    ],
+  },
 };
 
 export default subjectGames;
